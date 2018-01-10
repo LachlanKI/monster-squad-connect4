@@ -15,6 +15,7 @@ You know the rules.
  - **backend** > coming soon...
 
 ## preview gifs_
+(might take a minute to load)
 
 ![preview1](https://github.com/LachlanKI/monster-squad-connect4/blob/master/public/preview/msqd1.gif)
 
