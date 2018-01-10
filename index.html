@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>connect4</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
+</head>
+<body>
+
+    <div class="start-wrap">
+        <div class="start">
+            <h1>CONNECT FOUR</h1>
+            <h3>START</h3>
+        </div>
+    </div>
+
+    <div class="mouse-wrap">
+        <img src="./imgs/amulet.png" alt="custom pointer">
+    </div>
+
+    <div class="logo">
+        <div class="logo-wrap">
+            <img src="./imgs/logo.png" alt="logo">
+        </div>
+    </div>
+
+    <div class="characters-wrap">
+        <div class="horace">
+            <audio src="./audio/horaceWin.mp3"></audio>
+            <img src="./imgs/horace.png" alt="">
+        </div>
+        <div class="rudy">
+            <audio src="./audio/rudyWin.mp3"></audio>
+            <img src="./imgs/rudy.png" alt="">
+        </div>
+    </div>
+
+    <div class="img-wrap">
+        <audio src="./audio/lightning.mp3"></audio>
+        <img src="./imgs/mSquad2.jpg" alt="MONSTER SQUAD!">
+    </div>
+
+    <div class="victory">
+        <div class="reset">
+            <h1 id="who">SOMEONE HAS WON</h1>
+            <h1 id="reset">SQUAD UP!</h1>
+        </div>
+    </div>
+
+    <div id="con4-wrap">
+
+        <div class="column column0">
+            <div class="slot-wrap row0">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row1">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row2">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row3">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row4">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row5">
+                <div class="slot"></div>
+            </div>
+        </div>
+
+        <div class="column column1">
+            <div class="slot-wrap row0">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row1">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row2">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row3">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row4">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row5">
+                <div class="slot"></div>
+            </div>
+        </div>
+
+        <div class="column column2">
+            <div class="slot-wrap row0">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row1">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row2">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row3">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row4">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row5">
+                <div class="slot"></div>
+            </div>
+        </div>
+
+        <div class="column column3">
+            <div class="slot-wrap row0">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row1">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row2">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row3">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row4">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row5">
+                <div class="slot"></div>
+            </div>
+        </div>
+
+        <div class="column column4">
+            <div class="slot-wrap row0">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row1">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row2">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row3">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row4">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row5">
+                <div class="slot"></div>
+            </div>
+        </div>
+
+        <div class="column column5">
+            <div class="slot-wrap row0">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row1">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row2">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row3">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row4">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row5">
+                <div class="slot"></div>
+            </div>
+        </div>
+
+        <div class="column column6">
+            <div class="slot-wrap row0">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row1">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row2">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row3">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row4">
+                <div class="slot"></div>
+            </div>
+            <div class="slot-wrap row5">
+                <div class="slot"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <audio id="match-light" src="./audio/rudyMatch.mp3"></audio>
+    <audio id="theme" src="./audio/theme.mp3" loop ></audio>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="./script.js" charset="utf-8"></script>
+</body>
+</html>

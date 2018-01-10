@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.start-wrap {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 40;
+    background-image: url(./imgs/start.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    transition: bottom 3s;
+}
+
+.start {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Nosifer', cursive;
+    color: rgb(255, 253, 56);
+    text-shadow: 6px 6px rgb(191, 45, 35);
+    height: 770px;
+    width: 700px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.start h3:hover {
+    transform: scale(1.2);
+}
+
+.start h1 {
+    padding-top: 30px;
+}
+
+@keyframes lightning {
+    0% { filter: invert(0%)}
+    25% { filter: invert(100%)}
+    50% { filter: invert(0%)}
+    75% { filter: invert(100%)}
+    100% { filter: invert(0%)}
+}
+
+.lightning {
+    animation-name: lightning;
+    animation-duration: 0.3s;
+}
+
+.lightning2 {
+    animation-name: lightning;
+    animation-duration: 0.3s;
+    animation-iteration-count: 3;
+}
+
+.mouse-wrap {
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@keyframes indicate {
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(2deg)}
+    50% {transform: rotate(0deg)}
+    75% {transform: rotate(-2deg)}
+    100% {transform: rotate(0deg)}
+}
+
+.mouse-wrap img {
+    animation-name: indicate;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    width: 50px;
+    padding-bottom: 250px;
+    padding-left: 17%;
+    transition: rotate
+}
+
+.characters-wrap {
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+@keyframes winner {
+    0% {transform: skewY(0rad)}
+    25% {transform: skewY(0.025rad)}
+    50% {transform: skewY(0rad)}
+    75% {transform: skewY(-0.025rad)}
+    100% {transform: skewY(0rad)}
+}
+
+.winner {
+    animation-name: winner;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+}
+
+.rudy {
+    width: 31%;
+    position: relative;
+    bottom: 0;
+    padding-right: 40px;
+    z-index: 10;
+}
+
+.horace {
+    width: 31%;
+    position: relative;
+    bottom: 0;
+    padding-left: 30px;
+    z-index: 10;
+}
+
+.rudy img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.horace  img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+}
+
+.logo-wrap {
+    padding-right: 50px;
+    padding-top: 50px;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1, 1)}
+    25% {transform: scale(1.02, 1.01)}
+    50% {transform: scale(1)}
+    75% {transform: scale(1.02, 1.01)}
+    100% {transform: scale(1)}
+}
+
+.logo img {
+    animation-name: pulse;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    width: 100%;
+}
+
+.img-wrap {
+    right: 200px;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    transition: right 15s;
+}
+
+.img-wrap img {
+    height: 100%;
+}
+
+.victory {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 30;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.reset h1 {
+    font-family: 'Nosifer', cursive;
+    color: rgb(255, 253, 56);
+    text-shadow: 6px 6px rgb(191, 45, 35);
+    text-align: center;
+}
+
+.reset img {
+    width: 100%;
+}
+
+.reset {
+    margin-top: 20px;
+    background-image: url(./imgs/victory.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 323px;
+    width: 700px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#con4-wrap {
+    padding-top: 50px;
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.column {
+    padding-bottom: 80px;
+}
+
+.slot-wrap {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: filter 0.5s;
+    border-radius: 20px;
+}
+
+.slot {
+    width: 55px;
+    height: 55px;
+    border-radius: 30%;
+    box-shadow: 0px 0px 700px 700px rgb(191, 45, 35);
+}
+
+.p1 {
+    background-color: rgb(214, 240, 254);
+    background-image: url(./imgs/wolfman.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.p2 {
+    background-color: rgb(255, 253, 56);
+    background-image: url(./imgs/gillman.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.winning-pieces {
+    background-color: rgb(32, 190, 67);
+    background-image: url(./imgs/dracula.png);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+
+    .start-wrap {
+        background-image: url(./imgs/start2.jpg);
+    }
+
+    .rudy {
+        width: 28%;
+    }
+
+    .horace {
+        width: 28%;
+    }
+
+    .mouse-wrap  img {
+        padding-bottom: 110px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .start-wrap {
+        background-image: url(./imgs/start3.jpg);
+    }
+
+    .rudy {
+        width: 28%;
+        padding-right: 0px;
+    }
+
+    .horace {
+        width: 28%;
+        padding-left: 0px;
+    }
+
+    .mouse-wrap  img {
+        padding-bottom: 0px;
+        padding-left: 10%;
+    }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+    .start {
+        font-size: 32px;
+    }
+
+    .start-wrap {
+        background-image: url(./imgs/start4.jpg);
+    }
+
+    .logo-wrap {
+        padding-right: 32px;
+        margin-left: 0px;
+        padding-top: 10px;
+    }
+
+    .logo img {
+        width: 370px;
+    }
+
+    .column {
+        padding-bottom: 260px;
+    }
+
+    .horace {
+        width: 28%;
+        padding-left: 0px;
+    }
+
+    .horace img {
+        width: 300px;
+    }
+
+    .rudy {
+        bottom: -150px;
+        padding-right: 140px;
+    }
+
+    .rudy img {
+        width: 400px;
+    }
+
+    .mouse-wrap img {
+        width: 30px;
+        padding-bottom: 510px;
+        padding-left: 13%;
+    }
+
+    .reset {
+        margin-top: 10px;
+        height: 223px;
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 479px) {
+
+    .start {
+        font-size: 28px;
+    }
+
+    .start-wrap {
+        background-image: url(./imgs/start5.jpg);
+    }
+
+    .logo-wrap {
+        padding-right: 0px;
+        margin-left: 0px;
+        padding-top: 10px;
+    }
+
+    .logo img {
+        width: 370px;
+    }
+
+    .column {
+        padding-bottom: 360px;
+    }
+
+    .slot-wrap {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+    }
+
+    .slot {
+        width: 40px;
+        height: 40px;
+    }
+
+    .horace {
+        width: 28%;
+        padding-left: 0px;
+        left: -60px;
+    }
+
+    .horace img {
+        width: 350px;
+    }
+
+    .rudy {
+        bottom: -170px;
+        padding-right: 160px;
+    }
+
+    .rudy img {
+        width: 460px;
+    }
+
+    .mouse-wrap img {
+        width: 30px;
+        padding-bottom: 510px;
+        padding-left: 9%;
+    }
+
+    .reset {
+        margin-top: 10px;
+        height: 223px;
+        width: 95%;
+    }
+
+}
